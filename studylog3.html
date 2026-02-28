@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>StudyLog 🎀</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#FFD6EC,#E0BBFF,#CDE7FF);
+}
+
+/* Hide Sections */
+.section{
+    display:none;
+    padding:30px;
+}
+
+/* Header */
+.header{
+    text-align:center;
+    padding:25px;
+    background:linear-gradient(90deg,#FF69B4,#C084FC);
+    color:white;
+    border-radius:0 0 30px 30px;
+}
+
+/* Home Buttons */
+.menu{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:60px;
+}
+
+.menu button{
+    width:220px;
+    padding:15px;
+    margin:15px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(90deg,#FF69B4,#00C9FF);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu button:hover{
+    transform:scale(1.1);
+}
+
+/* Cards */
+.card{
+    background:white;
+    padding:25px;
+    margin:25px auto;
+    border-radius:25px;
+    width:90%;
+    max-width:600px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card a{
+    display:block;
+    margin:8px 0;
+    text-decoration:none;
+    color:#7B2CBF;
+    font-weight:bold;
+}
+
+.card h3{
+    color:#FF69B4;
+}
+
+/* Progress Bars */
+.progress-bar{
+    background:#eee;
+    border-radius:20px;
+    overflow:hidden;
+    margin:10px 0;
+}
+
+.progress-fill{
+    height:22px;
+    background:linear-gradient(90deg,#FF69B4,#00C9FF);
+    text-align:center;
+    color:white;
+    line-height:22px;
+}
+
+/* Back Button */
+.back{
+    margin-top:20px;
+    text-align:center;
+}
+
+.back button{
+    background:#FF69B4;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🎀 StudyLog ICT 🎀</h1>
+    <p>Revision Tracking Dashboard</p>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section" style="display:block;">
+    <div class="menu">
+        <button onclick="showSection('papers')">📄 Papers</button>
+        <button onclick="showSection('scores')">📊 My Scores</button>
+        <button onclick="showSection('analysis')">📈 Analysis</button>
+    </div>
+</div>
+
+<!-- PAPERS -->
+<div id="papers" class="section">
+    <div class="card">
+        <h3>📄 Revision Papers</h3>
+
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQCthMuH30qtQ6cMdmlWaxqHAVi9zpDVYf-kfNkVFpl6T_w" target="_blank">Jan Week 1</a>
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQC8rUdRP0W5RIUgg7Nr1BbpAc7kTEBtMFSa_LsT70cecwI" target="_blank">Jan Week 2</a>
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQD8xWUyT49xQbnSnpr50nLkAapo6bWVyHHrKr-rbF2o4aE" target="_blank">Jan Week 3</a>
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQBi-IFCU3zXQrwQmfZBOCDLAR24TIbz_2cmez4rGASYNJU" target="_blank">Jan Week 4</a>
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQAknMJ59VfkQ4uGqgmwp9-eAV7_YvQOUwOJWyMW7q7qGjA" target="_blank">Feb Week 1</a>
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQAiRIk3RRACQrCbV_xOgMXGAR6Ki4C9zAxzn7FuQmEuceo" target="_blank">Feb Week 2</a>
+        <a href="https://1drv.ms/b/c/AA012FBF6A3E1671/IQBv9MSfcsoIR4vPdjvOeRFeASSvVyaPOh-lmeVR-X1F3Ok" target="_blank">Feb Week 3</a>
+    </div>
+
+    <div class="back">
+        <button onclick="showSection('home')">⬅ Back</button>
+    </div>
+</div>
+
+<!-- SCORES -->
+<div id="scores" class="section">
+    <div class="card">
+        <h3>📊 My Scores</h3>
+
+        <p>Jan Week 2</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:53%">53%</div></div>
+
+        <p>Jan Week 3</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:50%">50%</div></div>
+
+        <p>Jan Week 4</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:72.5%">72.5%</div></div>
+
+        <p>Feb Week 2</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:60%">60%</div></div>
+
+        <p>Feb Week 3</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:63%">63%</div></div>
+
+        <p>Feb Week 4</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:62%">62%</div></div>
+    </div>
+
+    <div class="back">
+        <button onclick="showSection('home')">⬅ Back</button>
+    </div>
+</div>
+
+<!-- ANALYSIS -->
+<div id="analysis" class="section">
+    <div class="card">
+        <h3>📈 Performance Analysis</h3>
+
+        <p>Current Average: <b>60.08%</b></p>
+        <p>Target Score: <b>75%</b></p>
+        <p>You need to improve by: <b>14.92%</b></p>
+
+        <p style="margin-top:20px;">
+        📌 Focus on weak areas from Jan Week 2 & 3.  
+        📌 Practice structured answers.  
+        📌 Revise theory before attempting papers.
+        </p>
+    </div>
+
+    <div class="back">
+        <button onclick="showSection('home')">⬅ Back</button>
+    </div>
+</div>
+
+<script>
+function showSection(id){
+    document.querySelectorAll('.section').forEach(section=>{
+        section.style.display='none';
+    });
+    document.getElementById(id).style.display='block';
+}
+</script>
+
+</body>
+</html>
